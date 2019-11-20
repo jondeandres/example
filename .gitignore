@@ -1,0 +1,4 @@
+*.pyc
+pyenv
+.pytest_cache
+__pycache__

@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+  example:
+    build:
+      context: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./:/app/
+
+  tests:
+    build:
+      context: .
+    entrypoint: pytest
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./:/app/
+
+  tests_ci:
+    build:
+      context: .
+    entrypoint: pytest
+    stdin_open: true
+    tty: true
